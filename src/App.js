@@ -1,14 +1,21 @@
-import ContactList from "./components/ContactList";
 import ContactsMain from "./components/ContactsMain";
 
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <h2>Contacts</h2>
-      <ContactsMain />
-      <ContactList />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <h2>Contacts</h2>
+        <Routes>
+          <Route path="/" element={<ContactsMain />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
