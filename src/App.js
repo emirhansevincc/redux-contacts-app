@@ -1,4 +1,5 @@
 import ContactsMain from "./components/ContactsMain";
+import EditContact from "./components/EditContact";
 
 import {
   BrowserRouter,
@@ -13,6 +14,7 @@ function App() {
         <h2>Contacts</h2>
         <Routes>
           <Route path="/" element={<ContactsMain />} />
+          <Route path="/edit/:id" element={<EditContact />} />
         </Routes>
       </div>
     </BrowserRouter>

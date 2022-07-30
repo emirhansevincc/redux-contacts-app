@@ -1,6 +1,8 @@
 import React from 'react'
 import { deleteItem } from '../redux/contactSlice'
 import { useDispatch } from 'react-redux/es/exports'
+import { Link } from 'react-router-dom'
+
 
 function ListItem({ item }) {
 
@@ -20,7 +22,9 @@ function ListItem({ item }) {
           className='btn'
           onClick={buttonClick}
           >X</button>
-        <button className='btn'>Edit</button> 
+        <button 
+          className='btn'
+        ><Link to={`edit/${item.id}`}>Edit</Link></button> 
       </div>
     </div>
   )
